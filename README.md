@@ -79,7 +79,7 @@ academic-rag build-vectors
 
 ```bash
 # Keyword + vector hybrid search
-academic-rag search "digital economy and innovation" --top-k 10
+academic-rag search "renewable energy policy effectiveness" --top-k 10
 
 # Search with detail level
 academic-rag search "transformer attention" --layer detail
@@ -101,7 +101,7 @@ print(indexer.get_stats())
 indexer.close()
 
 # Search
-results = search("digital economy productivity", top_k=5)
+results = search("climate policy carbon pricing", top_k=5)
 for r in results:
     print(f"[{r.score:.3f}] {r.title} ({r.year})")
     print(f"  {r.content[:100]}...")
@@ -122,11 +122,11 @@ retriever.close()
 ```python
 from rag.embeddings import EmbeddingFactory, set_provider
 
-# Use Qwen via aiping.cn
+# Use Qwen via compatible API
 provider = EmbeddingFactory.create(
     "openai",
     model="Qwen3-Embedding-8B",
-    api_base="https://aiping.cn/api/v1",
+    api_base="https://your-api-provider.com/v1",
     api_key="your-key"
 )
 set_provider(provider)
@@ -148,7 +148,7 @@ from rag import MultiSourceRetriever
 
 retriever = MultiSourceRetriever()
 results = retriever.retrieve_for_citation(
-    "AI enhances productivity through automation and augmentation"
+    "Remote work increases employee autonomy but may reduce knowledge spillovers"
 )
 for r in results:
     print(f"  {r.citation_key}")
@@ -162,9 +162,9 @@ from rag import search
 
 # Search from multiple angles
 queries = [
-    "digital economy measurement GDP",
-    "ICT investment productivity paradox",
-    "platform economy labor market"
+    "climate change adaptation strategies",
+    "carbon tax economic impact",
+    "green technology adoption barriers"
 ]
 all_results = []
 for q in queries:
@@ -197,9 +197,9 @@ cp claude-integration/skills/*.md .claude/skills/
 ```
 
 Then in Claude Code:
-```
-> Search my papers for digital economy and innovation
-> Find citation support for: "AI empowers new productivity"
+```text
+> Search my papers for climate policy and carbon pricing
+> Find citation support for: "Green subsidies accelerate clean technology adoption"
 > Deep read this paper: ./papers/example.pdf
 > Process my reading inbox
 ```

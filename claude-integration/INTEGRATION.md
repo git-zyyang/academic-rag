@@ -35,9 +35,9 @@ academic-rag build-vectors
 ## Example Usage in Claude Code
 
 ```
-> Search my collection for papers about digital economy and innovation
+> Search my collection for papers about renewable energy and policy
 
-> Find citation support for: "AI empowers productivity through three pathways"
+> Find citation support for: "Remote work reshapes organizational knowledge flows"
 
 > Process this article: https://example.com/article
 

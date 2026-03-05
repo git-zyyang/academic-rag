@@ -53,12 +53,12 @@ def example_filtered_search():
     from rag import DocumentIndexer
     indexer = DocumentIndexer()
     docs = indexer.search_metadata(
-        query="digital economy",
+        query="supply chain resilience",
         year_from=2020,
         doc_type="paper",
         limit=10
     )
-    print(f"Found {len(docs)} papers about digital economy since 2020")
+    print(f"Found {len(docs)} papers about supply chain resilience since 2020")
     indexer.close()
     retriever.close()
 
@@ -67,7 +67,7 @@ def example_reranking():
     """Apply cross-encoder reranking to search results."""
     from rag import search, Reranker, SimpleReranker
 
-    query = "AI impact on labor markets"
+    query = "remote work and organizational performance"
     results = search(query, top_k=20)
 
     # Option 1: Cross-encoder reranking (requires sentence-transformers)
@@ -93,7 +93,7 @@ def example_citation_search():
     from rag import MultiSourceRetriever
 
     retriever = MultiSourceRetriever()
-    claim = "Digital infrastructure investment drives regional economic convergence"
+    claim = "Supply chain diversification reduces vulnerability to trade shocks"
     results = retriever.retrieve_for_citation(claim, top_k=5)
 
     print(f"Citations for: '{claim}'")

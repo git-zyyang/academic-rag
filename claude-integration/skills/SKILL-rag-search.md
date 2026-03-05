@@ -37,8 +37,8 @@ Configure your knowledge sources in `rag/config.py` `LITERATURE_PATHS`:
 **Triggers**: "search", "find papers", "look up", "any literature about..."
 
 ```
-search: digital economy and innovation
-search: AI impact on labor markets [limit: papers]
+search: renewable energy policy effectiveness
+search: organizational behavior and remote work [limit: papers]
 ```
 
 **Execution**:
@@ -53,7 +53,7 @@ results = search("your query", sources=["papers"], top_k=10)
 
 ```
 Find citation support for:
-"AI empowers new quality productive forces through three pathways"
+"Remote work increases employee autonomy but may reduce knowledge spillovers"
 ```
 
 ### 3. Metadata Query
@@ -62,7 +62,7 @@ Find citation support for:
 
 ```
 Find all papers by Author Name
-Find papers from 2023 onwards on digital economy
+Find papers from 2023 onwards on climate policy
 ```
 
 ### 4. Topic Browse

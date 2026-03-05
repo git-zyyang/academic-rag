@@ -40,7 +40,7 @@ Use Semantic Scholar MCP and/or citation_finder.py:
 # Use the mcp tools: search_papers, get_paper_details, get_citations, get_recommendations
 
 # citation_finder.py (zero dependencies)
-python scripts/citation_finder.py search "digital economy innovation" --limit 20
+python scripts/citation_finder.py search "renewable energy policy" --limit 20
 python scripts/citation_finder.py network PAPER_ID --depth 2
 python scripts/citation_finder.py bibtex PAPER_ID
 ```
@@ -54,9 +54,9 @@ python scripts/citation_finder.py bibtex PAPER_ID
 ## Search Strategy
 
 Generate 3 different angle queries for each concept:
-1. **Direct concept**: "digital economy productivity"
-2. **Mechanism pathway**: "technology adoption economic growth"
-3. **Empirical angle**: "ICT investment firm performance"
+1. **Direct concept**: "renewable energy policy effectiveness"
+2. **Mechanism pathway**: "carbon pricing emission reduction"
+3. **Empirical angle**: "green subsidy firm innovation"
 
 ## Output Format
 

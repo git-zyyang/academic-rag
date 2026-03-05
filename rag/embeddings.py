@@ -31,7 +31,7 @@ class EmbeddingProvider(ABC):
 class OpenAICompatibleProvider(EmbeddingProvider):
     """
     OpenAI-compatible API provider.
-    Works with OpenAI, Qwen (via aiping.cn), DeepSeek, Ollama, vLLM, etc.
+    Works with OpenAI, Qwen, DeepSeek, Ollama, vLLM, etc.
     """
 
     def __init__(self, model: str = "", api_base: str = "", api_key: str = "",
